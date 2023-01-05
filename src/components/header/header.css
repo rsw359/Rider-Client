@@ -1,0 +1,35 @@
+.header {
+  margin: 0px 0px 0px 0px;
+  background-color: rgb(88, 85, 81);
+  
+}
+
+.headerTitles {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: "Lora", serif;
+  
+}
+
+
+
+.headerTitleLg {
+  position: absolute;
+  top: 15%;
+  font-size: 100px;
+  color: rgb(251, 251, 251);
+  font-family: "Lora", serif;
+  font-style: italic;
+  /* background: rgba(31, 29, 29, 0.4);  */
+  border-radius: 5px;
+  text-shadow: -2px -1px 5px rgb(72, 43, 78);
+}
+
+.headerImg {
+  width: 100%;
+  height: 450px;
+  
+  object-fit: cover;
+  
+}
