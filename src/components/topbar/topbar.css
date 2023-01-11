@@ -21,6 +21,11 @@
   justify-content: center;
 }
 
+.topRightSignedIn {
+  display: flex;
+  align-items: center;
+}
+
 .topIcon {
   font-size: 20px;
   margin-right: 10px;

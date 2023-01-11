@@ -21,12 +21,14 @@
  .postCat {
    font-family: "Varela Round", serif;
    font-weight: 400;
-   font-size: 11px;
+   font-size: 13px;
    color: rgb(81, 79, 75);
    line-height: 20px;
    margin-top: 15px;
    margin-right: 10;
    cursor: pointer;
+   padding: 3px;
+   text-decoration:underline;
  }
  
  .postTitle {
@@ -49,7 +51,7 @@
  .postDesc {
    font-family: 'Varel Round',serif;
    font-size: 14px;
-   color: #444;
+   color: white;
    line-height: 24px;
    margin-top: 15px;
    overflow: hidden;
@@ -58,3 +60,5 @@
    -webkit-line-clamp: 4;
    -webkit-box-orient: vertical;
  }
+
+ 

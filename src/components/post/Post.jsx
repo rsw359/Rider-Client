@@ -1,13 +1,15 @@
 import "./post.css";
-import rapha from "../post/assets/redrapha.jpeg";
+import bmc from "../post/assets/bmc.jpg";
 
 export default function Post() {
   return (
     <div className="post">
-      <img src={rapha} alt="" className="postImg" />
+      <img src={bmc} alt="" className="postImg" />
       <div className="postInfo">
-        <span className="postCat">Music</span>
-        <span className="postCat">Life</span>
+        <div className="postCatContainer">
+          <span className="postCat">Music</span>
+          <span className="postCat">Life</span>
+        </div>
         <span className="postTitle">Lorem ipsum, dolor sit amet</span>
 
         <span className="postDate">1 hour ago</span>
