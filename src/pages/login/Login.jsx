@@ -13,7 +13,11 @@ function Login() {
         <input type="Password" className="loginInput" placeholder="password" />
         <button className="loginButton">Login</button>
       </form>
-      <button className="registerButton">Register</button>
+      <button className="registerButton">
+        <Link className="link" to="/register">
+          Register
+        </Link>
+      </button>
     </div>
   );
 }

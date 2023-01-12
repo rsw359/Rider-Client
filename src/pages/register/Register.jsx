@@ -29,7 +29,11 @@ function Register() {
         <button className="registerButton">Register</button>
       </form>
 
-      <button className="loginButton">Login</button>
+      <button className="loginButton">
+        <Link className="link" to="/login">
+          Login
+        </Link>
+      </button>
     </div>
   );
 }

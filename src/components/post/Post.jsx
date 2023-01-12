@@ -1,35 +1,27 @@
 import "./post.css";
 import bmc from "../post/assets/bmc.jpg";
+import { Link } from "react-router-dom";
 
-export default function Post() {
+export default function Post({ post }) {
   return (
     <div className="post">
-      <img src={bmc} alt="" className="postImg" />
+      {post.photo && <img className="postImg" src={post.photo} alt=""></img>}
       <div className="postInfo">
         <div className="postCatContainer">
-          <span className="postCat">Music</span>
-          <span className="postCat">Life</span>
+          {post.categories.map((c) => (
+            <span className="postCat">{c.name}</span>
+          ))}
         </div>
-        <span className="postTitle">Lorem ipsum, dolor sit amet</span>
 
-        <span className="postDate">1 hour ago</span>
+        <Link className="link" to={`/post/${post._id}`}>
+          <span className="postTitle">{post.title}</span>
+        </Link>
+
+        <span className="postDate">
+          {new Date(post.createdAt).toDateString()}
+        </span>
       </div>
-      <p className="postDesc">
-        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Odio
-        perferendis, quaerat voluptatibus ipsam accusantium similique inventore
-        modi esse vero ipsa? Aut minus expedita sunt ipsam accusamus quidem
-        eveniet illo tempora. Lorem ipsum dolor sit amet consectetur adipisicing
-        elit. Provident eveniet, corporis architecto tenetur accusantium ipsam
-        adipisci, aliquid, consectetur a numquam aperiam ut maiores? Harum
-        dolores sunt ab exercitationem, provident fugit. Lorem ipsum dolor sit
-        amet consectetur adipisicing elit. Sed enim, cupiditate alias eligendi
-        ab unde dolorum quam sequi, fuga est repudiandae exercitationem, rerum
-        incidunt saepe corrupti repellat nostrum cum similique? Lorem ipsum
-        dolor, sit amet consectetur adipisicing elit. Nobis accusamus veniam
-        suscipit rem ratione inventore quo deserunt assumenda nostrum delectus,
-        corrupti saepe autem natus incidunt temporibus. Laboriosam saepe dolor
-        odio?
-      </p>
+      <p className="postDesc">{post.desc}</p>
     </div>
   );
 }
