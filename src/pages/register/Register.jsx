@@ -1,9 +1,10 @@
 import "./register.css";
 import { Link } from "react-router-dom";
-import { useState, useEffect} from "react"
+import { useState } from "react";
+import axios from "axios";
 
 function Register() {
-  const [userName, setUserName] = useState("");
+  const [username, setUsername] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState(false);
@@ -11,28 +12,27 @@ function Register() {
     e.preventDefault();
     setError(false);
 
-    try{
-    const res = await axios.post("/auth/register", {
-      username, 
-      email, 
-      password,
-      
-    });
-    res.data && window.location.replace("/login");
-  } catch(err){
-    setError(true);
-  }
+    try {
+      const res = await axios.post("/auth/register", {
+        username,
+        email,
+        password,
+      });
+      res.data && window.location.replace("/login");
+    } catch (err) {
+      setError(true);
+    }
   };
   return (
     <div className="register">
       <span className="registerTitle">Register</span>
-      <form className="registerForm" onSubmit={handleSubmit()}>
+      <form className="registerForm" onSubmit={handleSubmit}>
         <label className="inputLabel">Username</label>
         <input
           type="text"
           className="registerInput"
           placeholder="Enter Your Username"
-          onChange={e=>setUserName(e.tartget.value)}
+          onChange={(e) => setUsername(e.target.value)}
         />
 
         <label className="inputLabel">Email</label>
@@ -40,7 +40,7 @@ function Register() {
           type="text"
           className="registerInput"
           placeholder="Enter Your Email"
-          onChange={e=>setEmail(e.tartget.value)}
+          onChange={(e) => setEmail(e.target.value)}
         />
 
         <label className="inputLabel">Password</label>
@@ -48,9 +48,11 @@ function Register() {
           type="Password"
           className="registerInput"
           placeholder="Password"
-          onChange={e=>setPassword(e.tartget.value)}
+          onChange={(e) => setPassword(e.target.value)}
         />
-        <button className="registerButton" type="submit">Register</button>
+        <button className="registerButton" type="submit">
+          Register
+        </button>
       </form>
 
       <button className="loginButton">
@@ -58,7 +60,17 @@ function Register() {
           Login
         </Link>
       </button>
-      {error && <span style={{color:"red", marginTop:"10px"}}>Something went wrong!</span>}
+      {error && (
+        <span
+          style={{
+            color: "yellow",
+            marginTop: "10px",
+            fontSize: "20px",
+          }}
+        >
+          An account with this name <br /> or email already exists.
+        </span>
+      )}
     </div>
   );
 }

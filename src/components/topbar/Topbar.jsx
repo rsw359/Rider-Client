@@ -3,7 +3,7 @@ import monkey from "./assets/monkey.jpg";
 import { Link } from "react-router-dom";
 
 function Topbar() {
-  const user = true;
+  const user = false;
   return (
     <div className="top">
       <div className="top-left">
