@@ -10,6 +10,7 @@
    height: 300px;
    object-fit: cover;
    border-radius: 7px;
+  margin-bottom: 5px;
  }
  
  .postInfo {
@@ -39,14 +40,7 @@
    cursor: pointer;
  }
  
- .postDate {
-   font-family: "Lora", serif;
-   font-style: italic;
-   font-size: 13px;
-   font-weight: 400;
-   color: #211818;
-   margin-top: 15px;
- }
+ 
  
  .postDesc {
    font-family: 'Varel Round',serif;
@@ -60,5 +54,7 @@
    -webkit-line-clamp: 4;
    -webkit-box-orient: vertical;
  }
+
+
 
  

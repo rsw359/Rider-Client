@@ -1,11 +1,14 @@
 import "./post.css";
-import bmc from "../post/assets/bmc.jpg";
+// import bmc from "../post/assets/bmc.jpg";
 import { Link } from "react-router-dom";
 
 export default function Post({ post }) {
+  const PF = "http://localhost:3001/images/";
   return (
     <div className="post">
-      {post.photo && <img className="postImg" src={post.photo} alt=""></img>}
+      {post.photo && (
+        <img className="postImg" src={PF + post.photo} alt=""></img>
+      )}
       <div className="postInfo">
         <div className="postCatContainer">
           {post.categories.map((c) => (

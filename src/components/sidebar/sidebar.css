@@ -40,6 +40,9 @@
 .sidebarItem  p {
   padding: 30px;
   color: white;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 .sidebarList {
@@ -49,7 +52,8 @@
 
 .sidebarListItems{
   display: inline-block;
-  width: 50%;
+  width: 100%;
+  text-align: center;
   margin-top: 15px;
   cursor: pointer;
   color: white;
@@ -68,3 +72,10 @@
   margin-left: 10px;
   cursor: pointer;
 } 
+
+@media (max-width: 768px) {
+  .sidebar {
+    display: none;
+  }
+  
+}
