@@ -1,0 +1,70 @@
+.register{
+  height: calc(100vh - 50px);
+  
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background: url('./assets/junpei2.jpg');
+  background-position: center;
+  background-size: cover;
+  background-repeat: none;
+  align-items: center;
+ 
+}
+
+.registerTitle{
+  font-size: 50px;
+  color: white;
+  font-family: 'Josefin Sans', sans-serif;
+}
+.registerForm{
+  width: 20vw;
+  display: flex;
+  flex-direction: column;
+  border: 2px solid white;
+  border-radius: 5px;
+  padding: 20px;
+  background: rgba(35, 32, 32, 0.4);
+  
+}
+
+.registerForm input{
+  outline: none;
+}
+.registerForm label {
+  margin: 5px 0;
+}
+
+.registerInput{
+  padding: 10px;
+  background-color: #fff;
+  border: none;
+}
+
+.inputLabel{
+  color:white;
+  font-family: 'Josefin Sans', sans-serif;
+}
+
+.registerButton{
+  margin: 20px 0;
+  border:none;
+  border-radius:5px;
+  background-color: rgb(168, 111, 169);
+  color: white;
+  font-size: 20px;
+  font-family: 'Varela Round', sans-serif;
+ 
+}
+
+.loginButton{
+  margin-top: 20px;
+  border:none;
+  border-radius:5px;
+  background-color: rgb(64, 95, 88);
+  color: white;
+  font-size: 20px;
+  font-family: 'Varela Round', sans-serif;
+  padding: 10px  30px;
+  cursor: pointer;
+}

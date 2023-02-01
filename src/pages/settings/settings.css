@@ -1,0 +1,100 @@
+.settings {
+  display: flex;
+}
+
+.settingsContainer{
+  flex: 9;
+  padding: 20px;
+}
+
+.settingsTitle{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.settingsUpdateTitle{
+  font-size: 30px;
+  margin-bottom: 30px;
+  color: #000;
+  font-family: "Lora", serif;
+}
+
+.settingsDeleteTitle{
+  color: black;
+  padding: 10px;
+  background-color: rgb(187, 68, 68);
+  font-size: 20px;
+  cursor:pointer;
+  border-radius: 5px;
+}
+
+.settingsForm{
+  display: flex;
+  flex-direction: column;
+}
+
+.settingsProfPic{
+  display: flex;
+  align-items: center;
+  margin-top: 10 0;
+}
+
+.settingsProfPic img{
+  width: 100px;
+  height: 100px;
+  border-radius: 20px ;
+  object-fit: cover;
+}
+
+.settingsPPIcon{
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background-color: rgb(153, 146, 146);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 10px;
+  cursor: pointer;
+}
+
+.settingsForm label{
+  font-size: 20px;
+  margin-top: 20px;
+}
+
+.settingsForm input{
+  color:white;
+  margin: 20px 0;
+  height: 30px;
+  border: none;
+  border-bottom: 2px solid rgb(88, 85, 81);
+  font-size: 20px;
+  background: none;
+  outline: none;
+}
+
+.settingsSubmit{
+  
+  align-self: center;
+  border:none;
+  border-radius:5px;
+  background-color: rgb(32, 157, 157);
+  color: white;
+  font-size: 20px;
+  font-family: 'Varela Round', sans-serif;
+  margin-top: 20px;
+  cursor: pointer;
+  padding: 10px 30px;
+}
+
+.inputLabel{
+  font-family: "Josefin San", sans-serif;
+}
+
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: white;
+  opacity: 0.5; /* Firefox */
+}

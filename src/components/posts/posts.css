@@ -1,6 +1,13 @@
 .posts{
   flex:9;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   background-color: rgb(148, 142, 142);
   border-radius: 10px;
   margin: 10px 10px 10px 10px;
+  padding-top: 30px;
 }
+
+
+

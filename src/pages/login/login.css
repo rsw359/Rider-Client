@@ -1,0 +1,74 @@
+.login{
+  height: calc(100vh - 50px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background: url('./assets/mick.jpg');
+  background-position: center;
+  background-size: cover;
+  background-repeat: none;
+  align-items: center;
+ 
+}
+
+.loginTitle{
+  font-size: 50px;
+  color: white;
+  font-family: 'Josefin Sans', sans-serif;
+}
+.loginForm{
+  width: 20vw;
+  display: flex;
+  flex-direction: column;
+  border: solid grey;
+  border-radius: 5px;
+  padding: 20px;
+  background: rgba(35, 32, 32, 0.4); 
+  
+}
+
+.loginForm input {
+  outline: none;
+}
+
+.loginForm label {
+  margin: 5px 0;
+}
+
+.loginInput{
+  padding: 10px;
+  background-color: #fff;
+  border: none;
+}
+
+.inputLabel{
+  color:white;
+  font-family: 'Josefin Sans', sans-serif;
+}
+.loginButton{
+  margin: 20px 0;
+  border:none;
+  border-radius:5px;
+  background-color: rgb(153, 146, 146);
+  color: white;
+  font-size: 20px;
+  font-family: 'Varela Round', sans-serif;
+  padding: 10px;
+}
+
+.loginButton:disabled{
+  cursor: not-allowed;
+  background-color: rgb(117, 176, 176) ;
+}
+
+.registerButton{
+  margin-top: 20px;
+  border:none;
+  border-radius:5px;
+  background-color: teal;
+  color: white;
+  font-size: 20px;
+  font-family: 'Varela Round', sans-serif;
+  padding: 10px;
+  cursor: pointer;
+}
