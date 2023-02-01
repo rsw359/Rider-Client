@@ -81,9 +81,10 @@ function Write() {
             className="writeInput writeSelect"
             onChange={(e) => setCategory(e.target.value)}
           >
+            console.log(category)
             <option value="">Select a category</option>
             {categories.map((category) => (
-              <option key={category._id} value={category._id}>
+              <option key={category._id} value={category.name}>
                 {category.name}
               </option>
             ))}
