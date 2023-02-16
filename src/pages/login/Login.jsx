@@ -25,7 +25,7 @@ function Login() {
 
   const googleAuth = async () => {
     window.open(
-      `${process.env.REACT_APP_API_URL}/auth/google/callback`,
+      `${process.env.REACT_APP_API_URL}/api/auth/google/callback`,
       "_self"
     );
   };
