@@ -1,5 +1,4 @@
 import "./topbar.css";
-import monkey from "./assets/monkey.jpg";
 import { Link } from "react-router-dom";
 import { useContext } from "react";
 import { Context } from "../../context/Context";
