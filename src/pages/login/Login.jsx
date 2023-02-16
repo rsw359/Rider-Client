@@ -23,6 +23,13 @@ function Login() {
     }
   };
 
+  const googleAuth = async () => {
+    window.open(
+      `${process.env.REACT_APP_API_URL}/api/auth/google/callback`,
+      "_self"
+    );
+  };
+
   return (
     <div className="login">
       <span className="loginTitle">Login</span>
@@ -44,6 +51,10 @@ function Login() {
         />
         <button className="loginButton" type="submit" disabled={isFetching}>
           Login
+        </button>
+        <button className="googleBtn" onClick={googleAuth}>
+          <img src="./assets/google.png" alt="google icon" />
+          <span>Sign in with Google</span>
         </button>
       </form>
       <button className="registerButton">
