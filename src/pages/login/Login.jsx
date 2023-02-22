@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { useRef, useContext } from "react";
 import { Context } from "../../context/Context";
 import axios from "axios";
+import google from "./assets/google.jpg";
 
 function Login() {
   const userRef = useRef();
@@ -24,10 +25,7 @@ function Login() {
   };
 
   const googleAuth = async () => {
-    window.open(
-      `${process.env.REACT_APP_API_URL}/api/auth/google/callback`,
-      "_self"
-    );
+    window.open("http://localhost:3001/auth/google", "_self");
   };
 
   return (
@@ -53,7 +51,7 @@ function Login() {
           Login
         </button>
         <button className="googleBtn" onClick={googleAuth}>
-          <img src="./assets/google.png" alt="google icon" />
+          <img src={google} alt="google icon" />
           <span>Sign in with Google</span>
         </button>
       </form>
