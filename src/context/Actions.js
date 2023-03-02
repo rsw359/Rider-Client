@@ -24,9 +24,9 @@ export const UpdateSuccess = (user) => ({
   payload: user,
 });
 
-export const GoogleSuccess = (profile) => ({
+export const GoogleSuccess = (user) => ({
   type: "GOOGLE_SUCCESS",
-  payload: profile,
+  payload: user,
 });
 
 export const UpdateFailure = () => ({

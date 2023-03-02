@@ -26,27 +26,33 @@ function Login() {
 
   const googleAuth = () => {
     window.open("http://localhost:3001/auth/google", "_self");
+
+    window.addEventListener("message", (event) => {
+      if (event.data.type === "google-auth-success") {
+        dispatch({ type: "GOOGLE_SUCCESS", payload: event.data.user });
+      }
+    });
   };
 
-  // useEffect(() => {
-  //   const getUser = async () => {
-  //     await axios
-  //       .get("http://localhost:3001/auth/login/success")
-  //       .then((response) => {
-  //         if (response.status === 200) return response.json();
-  //         throw new Error("Authentication failed");
-  //       })
-  //       .then((resObject) => {
-  //         dispatch(resObject.user);
-  //       })
-  //       .catch((err) => {
-  //         console.log(err);
-  //       });
-  //   };
-  //   getUser();
-  // }, [dispatch]);
+  useEffect(() => {
+    const getUser = async () => {
+      try {
+        const response = await axios.get(
+          "http://localhost:3001/api/auth/login/success"
+        );
+        if (response.status === 200) {
+          dispatch({ type: "LOGIN_SUCCESS", payload: response.data.user });
+        } else {
+          throw new Error("Authentication failed");
+        }
+      } catch (err) {
+        console.log(err);
+      }
+    };
+    getUser();
+  }, [dispatch]);
 
-  // console.log(dispatch);
+  console.log();
 
   return (
     <div className="login">
