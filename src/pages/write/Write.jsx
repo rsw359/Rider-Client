@@ -1,5 +1,4 @@
 import "../write/write.css";
-import cloud from "./assets/cloud.jpg";
 import { useContext, useState } from "react";
 import axios from "axios";
 import { Context } from "../../context/Context";
