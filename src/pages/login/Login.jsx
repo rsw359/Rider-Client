@@ -1,6 +1,6 @@
 import "./login.css";
 import { Link } from "react-router-dom";
-import { useRef, useContext } from "react";
+import { useRef, useContext, useEffect } from "react";
 import { Context } from "../../context/Context";
 import axios from "axios";
 import google from "./assets/google.jpg";
@@ -24,9 +24,29 @@ function Login() {
     }
   };
 
-  const googleAuth = async () => {
+  const googleAuth = () => {
     window.open("http://localhost:3001/auth/google", "_self");
   };
+
+  // useEffect(() => {
+  //   const getUser = async () => {
+  //     await axios
+  //       .get("http://localhost:3001/auth/login/success")
+  //       .then((response) => {
+  //         if (response.status === 200) return response.json();
+  //         throw new Error("Authentication failed");
+  //       })
+  //       .then((resObject) => {
+  //         dispatch(resObject.user);
+  //       })
+  //       .catch((err) => {
+  //         console.log(err);
+  //       });
+  //   };
+  //   getUser();
+  // }, [dispatch]);
+
+  // console.log(dispatch);
 
   return (
     <div className="login">

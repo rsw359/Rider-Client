@@ -37,6 +37,13 @@ const LoginReducer = (state, action) => {
         error: true,
       };
 
+    case "GOOGLE_SUCCESS":
+      return {
+        user: action.payload,
+        isFetching: false,
+        error: false,
+      };
+
     case "LOGOUT":
       return {
         user: null,
