@@ -38,7 +38,7 @@ function Login() {
     const getUser = async () => {
       try {
         const response = await axios.get(
-          "http://localhost:3001/api/auth/login/success"
+          "http://localhost:3001/auth/login/success"
         );
         if (response.status === 200) {
           dispatch({ type: "LOGIN_SUCCESS", payload: response.data.user });
