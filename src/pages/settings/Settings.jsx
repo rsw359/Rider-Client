@@ -12,7 +12,7 @@ function Settings() {
   const [success, setSuccess] = useState(false);
 
   const { user, dispatch } = useContext(Context);
-  const PF = "http://localhost:3001/images/";
+  const PF = `${process.env.REACT_APP_URL}/images`;
 
   const handleSubmit = async (e) => {
     e.preventDefault();
