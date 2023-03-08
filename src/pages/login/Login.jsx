@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { useRef, useContext } from "react";
 import { Context } from "../../context/Context";
 import axios from "axios";
+// import google from "./assets/google.jpg";
 
 function Login() {
   const userRef = useRef();
