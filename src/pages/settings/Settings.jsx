@@ -12,7 +12,7 @@ function Settings() {
   const [success, setSuccess] = useState(false);
 
   const { user, dispatch } = useContext(Context);
-  const PF = `${process.env.REACT_APP_URL}/images`;
+  const PF = "../../images/";
 
   const handleSubmit = async (e) => {
     e.preventDefault();

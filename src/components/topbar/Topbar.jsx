@@ -5,7 +5,7 @@ import { Context } from "../../context/Context";
 
 function Topbar() {
   const { user, dispatch } = useContext(Context);
-  const PF = `${process.env.REACT_APP_URL}/images`;
+  const PF = "../../images/";
   const handleLogout = () => {
     dispatch({ type: "LOGOUT" });
   };
