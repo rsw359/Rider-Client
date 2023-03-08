@@ -8,7 +8,7 @@ import axios from "axios";
 function SinglePost() {
   const location = useLocation();
   const path = location.pathname.split("/")[2];
-  const PF = "http://localhost:3001/images/";
+  const PF = `${process.env.REACT_APP_URL}/images`;
   const { user } = useContext(Context);
   const [post, setPost] = useState({});
   const [title, setTitle] = useState("");
