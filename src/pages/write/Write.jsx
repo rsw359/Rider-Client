@@ -1,5 +1,4 @@
 import "../write/write.css";
-import cloud from "./assets/cloud.jpg";
 import { useContext, useState } from "react";
 import axios from "axios";
 import { Context } from "../../context/Context";
@@ -17,7 +16,7 @@ function Write() {
   useEffect(() => {
     async function fetchCategories() {
       try {
-        const res = await axios.get("/categories");
+        const res = await axios.get(`${process.env.REACT_APP_URL}/categories`);
         setCategories(res.data);
       } catch (err) {
         console.error(err);
