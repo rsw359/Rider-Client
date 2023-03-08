@@ -13,7 +13,7 @@ function Home() {
   useEffect(() => {
     const getPosts = async () => {
       const res = await axios.get(
-        `${process.env.REACT_APP_URL}/posts` + search
+        `${process.env.REACT_APP_URL}/posts/` + search
       );
       setPosts(res.data);
     };
