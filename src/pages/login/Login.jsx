@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { useRef, useContext } from "react";
 import { Context } from "../../context/Context";
 import axios from "axios";
-import google from "./assets/google.jpg";
+// import google from "./assets/google.jpg";
 
 function Login() {
   const userRef = useRef();
@@ -22,10 +22,6 @@ function Login() {
     } catch (err) {
       dispatch({ type: "LOGIN_FAILURE" });
     }
-  };
-
-  const googleAuth = async () => {
-    window.open("http://localhost:3001/auth/google", "_self");
   };
 
   return (
@@ -49,10 +45,6 @@ function Login() {
         />
         <button className="loginButton" type="submit" disabled={isFetching}>
           Login
-        </button>
-        <button className="googleBtn" onClick={googleAuth}>
-          <img src={google} alt="google icon" />
-          <span>Sign in with Google</span>
         </button>
       </form>
       <button className="registerButton">
